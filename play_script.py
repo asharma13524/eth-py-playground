@@ -24,5 +24,5 @@ for tx_hash in latest_block_obj.transactions:
     if tx.value > max_value:
         max_value = tx.value
         max_value_tx = tx
-        print("Transaction with highest value in block {}: {}".format(latest_block, max_value_tx))
+print("block: {}, value: {} eth, tx_id: {}".format(latest_block, max_value//1e18, max_value_tx.hash.hex()))
 
